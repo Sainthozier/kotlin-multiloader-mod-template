@@ -1,6 +1,6 @@
 package com.example.examplemod.mixin;
 
-import com.example.examplemod.Constants;
+import com.example.examplemod.ModInfo;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.TitleScreen;
 import org.spongepowered.asm.mixin.Mixin;
@@ -13,7 +13,7 @@ public class MixinTitleScreen {
     
     @Inject(at = @At("HEAD"), method = "init()V")
     private void init(CallbackInfo info) {
-        Constants.getLOG().info("This line is printed by an example mod mixin from Fabric!");
-        Constants.getLOG().info("MC Version: {}", Minecraft.getInstance().getVersionType());
+        ModInfo.getLOG().info("This line is printed by an example mod mixin from Fabric!");
+        ModInfo.getLOG().info("MC Version: {}", Minecraft.getInstance().getVersionType());
     }
 }

@@ -1,6 +1,6 @@
 package com.example.examplemod.platform
 
-import com.example.examplemod.Constants
+import com.example.examplemod.ModInfo
 import com.example.examplemod.platform.services.PlatformHelper
 import java.util.ServiceLoader
 
@@ -13,7 +13,7 @@ object Services {
             .orElseThrow {
                 IllegalStateException("Failed to load service for ${clazz.name}")
             }
-        Constants.LOG.debug("Loaded {} for service {}", loadedService, clazz)
+        ModInfo.LOG.debug("Loaded {} for service {}", loadedService, clazz)
         return loadedService
     }
 }

@@ -1,6 +1,6 @@
 package com.example.examplemod.mixin;
 
-import com.example.examplemod.Constants;
+import com.example.examplemod.ModInfo;
 import net.minecraft.client.Minecraft;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -12,7 +12,7 @@ public class MixinMinecraft {
     
     @Inject(at = @At("TAIL"), method = "<init>")
     private void init(CallbackInfo info) {
-        Constants.getLOG().info("This line is printed by an example mod common mixin!");
-        Constants.getLOG().info("MC Version: {}", Minecraft.getInstance().getVersionType());
+        ModInfo.getLOG().info("This line is printed by an example mod common mixin!");
+        ModInfo.getLOG().info("MC Version: {}", Minecraft.getInstance().getVersionType());
     }
 }
