@@ -1,4 +1,10 @@
+/*
+ * License Header: Change me
+ */
+
 package com.example.examplemod.platform.services
+
+import java.nio.file.Path
 
 interface PlatformHelper {
     /**
@@ -31,4 +37,11 @@ interface PlatformHelper {
     fun getEnvironmentName(): String {
         return if (isDevelopmentEnvironment()) "development" else "production"
     }
+
+    /**
+     * Gets the path to the configuration directory.
+     *
+     * @return The path to the configuration directory.
+     */
+    fun getConfigDir(): Path
 }

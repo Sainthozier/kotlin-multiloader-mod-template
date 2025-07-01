@@ -1,7 +1,12 @@
+/*
+ * License Header: Change me
+ */
+
 package com.example.examplemod.platform
 
 import com.example.examplemod.platform.services.PlatformHelper
 import net.fabricmc.loader.api.FabricLoader
+import java.nio.file.Path
 
 class FabricPlatformHelper : PlatformHelper {
     override fun getPlatformName(): String {
@@ -14,5 +19,9 @@ class FabricPlatformHelper : PlatformHelper {
 
     override fun isDevelopmentEnvironment(): Boolean {
         return FabricLoader.getInstance().isDevelopmentEnvironment
+    }
+
+    override fun getConfigDir(): Path {
+        return FabricLoader.getInstance().configDir
     }
 }

@@ -1,3 +1,7 @@
+/*
+ * License Header: Change me
+ */
+
 package com.example.examplemod
 
 import com.example.examplemod.platform.Services

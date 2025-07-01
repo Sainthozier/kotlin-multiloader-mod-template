@@ -1,3 +1,7 @@
+/*
+ * License Header: Change me
+ */
+
 package com.example.examplemod.mixin;
 
 import com.example.examplemod.ModInfo;

@@ -1,3 +1,7 @@
+/*
+ * License Header: Change me
+ */
+
 package com.example.examplemod
 
 import org.slf4j.Logger

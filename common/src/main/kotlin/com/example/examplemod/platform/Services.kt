@@ -1,3 +1,7 @@
+/*
+ * License Header: Change me
+ */
+
 package com.example.examplemod.platform
 
 import com.example.examplemod.ModInfo
