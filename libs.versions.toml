@@ -4,6 +4,7 @@ kotlin = "2.1.21"
 moddev = "2.0.93"
 loom = "1.9-SNAPSHOT"
 dokka = "1.9.20"
+licenser = "0.7.5"
 
 minecraft = "1.21.1"
 minecraftRange = "[1.21.1, 1.21.2)"
@@ -41,3 +42,4 @@ kotlin = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 dokka = { id = "org.jetbrains.dokka", version.ref = "dokka" }
 moddev = { id = "net.neoforged.moddev", version.ref = "moddev" }
 loom = { id = "fabric-loom", version.ref = "loom" }
+licenser = { id = "net.neoforged.licenser", version.ref = "licenser" }

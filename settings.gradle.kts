@@ -19,6 +19,10 @@ pluginManagement {
                 includeGroup("fabric-loom")
             }
         }
+        maven {
+            name = "NeoForge"
+            url = uri("https://maven.neoforged.net")
+        }
     }
 }
 

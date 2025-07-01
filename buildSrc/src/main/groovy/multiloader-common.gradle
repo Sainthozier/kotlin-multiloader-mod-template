@@ -5,10 +5,13 @@ plugins {
     id 'maven-publish'
     id "org.jetbrains.kotlin.jvm"
     id "org.jetbrains.dokka"
+    id "net.neoforged.licenser"
 }
 
+version = "${project.version}+${libs.versions.minecraft.get()}"
+
 base {
-    archivesName = "${modId}-${project.name}-${libs.versions.minecraft.get()}"
+    archivesName = "${modId}-${project.name}"
 }
 
 java {
@@ -19,6 +22,16 @@ java {
 
 kotlin {
     jvmToolchain(Integer.parseInt(libs.versions.java.get()))
+}
+
+license {
+    header(rootProject.file("HEADER.txt"))
+    properties {
+        name = project.modName
+        author = project.modAuthor
+        year = Calendar.getInstance().get(Calendar.YEAR).toString()
+    }
+    include("**/*.java", "**/*.kt")
 }
 
 repositories {

@@ -60,7 +60,17 @@ tasks.named('sourcesJar', Jar) {
 tasks.named("dokkaJavadoc", DokkaTask) {
     dependsOn(configurations.commonJava)
     dependsOn(configurations.commonKotlin)
+
     dokkaSourceSets.configureEach {
-        sourceRoots.from(configurations.commonJava.singleFile, configurations.commonKotlin.singleFile)
+        def javaSrcFile = configurations.commonJava.singleFile
+        def kotlinSrcFile = configurations.commonKotlin.singleFile
+
+        // Always add the Kotlin sources
+        sourceRoots.from(kotlinSrcFile)
+
+        // Only add the Java sources if the directory actually exists
+        if (javaSrcFile.exists()) {
+            sourceRoots.from(javaSrcFile)
+        }
     }
 }
