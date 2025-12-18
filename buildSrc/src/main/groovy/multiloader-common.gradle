@@ -54,8 +54,8 @@ repositories {
         url = 'https://maven.blamejared.com'
     }
     maven {
-        name = "kotlinforforge"
-        url = uri("https://thedarkcolour.github.io/KotlinForForge/")
+        name = "KotlinLangForge"
+        url = uri("https://repo.nyon.dev/releases")
     }
 }
 
@@ -134,8 +134,8 @@ processResources {
             'description'                  : project.description,
             'neoforge_version'             : libs.versions.neoforge.get(),
             'neoforge_range'               : libs.versions.neoforgeRange.get(),
-            'kff_version'                  : libs.versions.kff.get(),
-            'kff_version_range'            : libs.versions.kffRange.get(),
+            'klf_version'                  : libs.versions.klf.get(),
+            'klf_version_range'            : libs.versions.klfRange.get(),
             'credits'                      : credits,
             'java_version'                 : libs.versions.java.get()
     ]

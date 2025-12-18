@@ -43,5 +43,5 @@ neoForge {
 sourceSets.main.get().resources { srcDir("src/generated/resources") }
 
 dependencies {
-    implementation(libs.kff)
+    implementation(libs.klf)
 }
