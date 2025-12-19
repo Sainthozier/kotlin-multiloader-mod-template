@@ -114,8 +114,8 @@ tasks.named("javadoc", Javadoc) {
 
 // Make the javadoc jar take in the Dokka output
 tasks.named("javadocJar", Jar) {
-    dependsOn(tasks.named("dokkaJavadoc"))
-    from(tasks.named("dokkaJavadoc"))
+    dependsOn(tasks.named("dokkaGenerate"))
+    from(tasks.named("dokkaGenerate"))
 }
 
 processResources {
